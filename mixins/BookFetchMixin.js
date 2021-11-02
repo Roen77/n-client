@@ -10,6 +10,7 @@ export default {
         })
         data = { ...data, datetime: date, thumbnail: this.imagePath }
         if (!this.$route.params.id) {
+          console.log('채추가')
           // 책을 추가할 때
           await this.createBook(data)
             .then((res) => {
@@ -22,6 +23,8 @@ export default {
             })
         } else {
           // 책을 편집할 때
+          data.thumbnail = this.imagePath.length ? this.imagePath : this.book.thumbnail
+          console.log(data.thumbnail, this.book.thumbnail, this.book, '썸넬')
           await this.updateBook({ id: this.$route.params.id, data })
             .then((res) => {
               this.updateEdit(false)

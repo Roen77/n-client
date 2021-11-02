@@ -90,7 +90,7 @@ export default {
       return this.username && !this.isnicknameLength
     },
     disabledBtn () {
-      return this.isusernamevalid || !!this.imageErr
+      return this.isusernamevalid || !!this.imageErr || this.$store.state.initLoading
     }
   },
   created () {
