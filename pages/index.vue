@@ -28,7 +28,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(/images/home_bg2.jpg);
+  background-image: url(/images/mbg.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-position: 50% top;

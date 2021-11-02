@@ -10,13 +10,12 @@ export default {
         })
         data = { ...data, datetime: date, thumbnail: this.imagePath }
         if (!this.$route.params.id) {
-          console.log('채추가')
           // 책을 추가할 때
           await this.createBook(data)
             .then((res) => {
               // 라우터 이동
               this.$router.push('/books/1')
-              bus.$emit('on:alert', { data: res.data.msg, bgcolor: '#5C6BC0' })
+              bus.$emit('on:alert', { data: res.data.msg, bgcolor: '#1A237E' })
               setTimeout(() => {
                 bus.$emit('off:alert')
               }, 3000)
@@ -24,11 +23,10 @@ export default {
         } else {
           // 책을 편집할 때
           data.thumbnail = this.imagePath.length ? this.imagePath : this.book.thumbnail
-          console.log(data.thumbnail, this.book.thumbnail, this.book, '썸넬')
           await this.updateBook({ id: this.$route.params.id, data })
             .then((res) => {
               this.updateEdit(false)
-              bus.$emit('on:alert', { data: res.data.msg, bgcolor: '#FF7043' })
+              bus.$emit('on:alert', { data: res.data.msg, bgcolor: '#AD1457' })
               setTimeout(() => {
                 bus.$emit('off:alert')
               }, 3000)

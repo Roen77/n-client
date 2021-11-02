@@ -91,7 +91,6 @@ export default {
       const imageFormData = new FormData()
       this.selectedFile = e.target.files[0]
       const maxSize = 1024 * 1024
-      console.log(this.selectedFile, '????????????')
       const imageType = /^image/.test(this.selectedFile && this.selectedFile.type)
       if (!imageType) {
         this.selectedFile = ''

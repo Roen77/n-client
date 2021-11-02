@@ -8,5 +8,5 @@
 </template>
 
 <style>
-.add_container{padding-bottom: 80px;}
+.add_container{padding-bottom: 80px; width: 1000px; max-width: 100%; margin: 0 auto; }
 </style>

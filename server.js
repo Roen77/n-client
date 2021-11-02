@@ -16,8 +16,7 @@ async function start () {
     build(nuxt)
   }
   // Listen the server
-  app.listen(port, '0.0.0.0')
-  console.log('Server listening on `localhost:' + port + '`.')
+  app.listen(port, `${port}에서 실행중`)
 }
 
 start()
