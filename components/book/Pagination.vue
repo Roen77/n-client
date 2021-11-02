@@ -45,7 +45,6 @@ export default {
       handler (to) {
         const page = parseInt(to.params.page, 10)
         // 현재 페이지 활성화
-        console.log('현재페이지', page, '서버페이지', this.currentPage)
         if (this.currentPage === page) {
           this.getCurrentPage = page
         }

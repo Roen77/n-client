@@ -209,7 +209,6 @@ export const actions = {
         break
         // 태그별 겸색한 데이터
       case 'hashtags-page':
-        console.log('pate:', page, 'name', name)
         res = await this.$axios.get(`hashtags?page=${page}&name=${name}`)
         break
       default:
