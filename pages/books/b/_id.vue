@@ -62,15 +62,15 @@ export default {
     return {
       title: this.book.title,
       meta: [
-        { hid: 'og:url', property: 'og:url', content: `https://vue.roen.pe.kr/books/b/${this.book.id}` },
+        { hid: 'og:url', property: 'og:url', content: `https://library.roen.pe.kr/books/b/${this.book.id}` },
         { hid: 'og:type', property: 'og:type', content: 'website' },
         { hid: 'og:title', property: 'og:title', content: this.book.title },
         { hid: 'og:description', property: 'og:description', content: this.book.contents },
-        { hid: 'og:image', property: 'og:image', content: this.book.thumbnail ? `${this.book.thumbnail}` : 'https://vue.roen.pe.kr/images/sample_book.jpg' },
-        { hid: 'twitter:site', name: 'twitter:site', content: `https://vue.roen.pe.kr/books/b/${this.book.id}` },
+        { hid: 'og:image', property: 'og:image', content: this.book.thumbnail ? `${this.book.thumbnail}` : 'https://library.roen.pe.kr/images/sample_book.jpg' },
+        { hid: 'twitter:site', name: 'twitter:site', content: `https://library.roen.pe.kr/books/b/${this.book.id}` },
         { hid: 'twitter:title', name: 'twitter:title', content: this.book.title },
         { hid: 'twitter:description', name: 'twitter:description', content: this.book.contents },
-        { hid: 'twitter:image', name: 'twitter:image', content: this.book.thumbnail ? `${this.book.thumbnail}` : 'https://vue.roen.pe.kr/images/sample_book.jpg' }
+        { hid: 'twitter:image', name: 'twitter:image', content: this.book.thumbnail ? `${this.book.thumbnail}` : 'https://library.roen.pe.kr/images/sample_book.jpg' }
       ]
     }
   },
