@@ -1,9 +1,9 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'library-client',
+    title: 'libraryapp',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ko'
     },
     meta: [
       { charset: 'utf-8' },
@@ -17,10 +17,17 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/static/css/common.css',
+    '@/static/css/style.css'
   ],
-
+  loading: {
+    color: '#5C6BC0',
+    height: '5px'
+  },
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins' },
+    { src: '~/plugins/axios' }
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -29,7 +36,8 @@ export default {
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/moment'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -39,11 +47,30 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios'
   ],
-
+  bootstrapVue: {
+    bootstrapCSS: true, // Or `css: false`
+    bootstrapVueCSS: true, // Or `bvCSS: false`
+    components: ['BPagination'],
+    componentPlugins: [
+      'FormDatepickerPlugin'
+    ]
+  },
+  moment: {
+    defaultLocale: 'ko',
+    locales: ['ko']
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    browserBaseURL: process.env.NODE_ENV === 'production' ? 'https://app.roen.pe.kr/' : 'http://localhost:5000/',
+    baseURL: process.env.NODE_ENV === 'production' ? 'https://app.roen.pe.kr/' : 'http://localhost:5000/',
+    // baseURL: 'http://localhost:5000/',
+    credentials: true
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+  },
+  server: {
+    port: process.env.PORT || 3000
   }
 }
