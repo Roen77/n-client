@@ -89,10 +89,10 @@ export default {
       }
     },
     google () {
-      window.location = 'https://api.roen.pe.kr/user/google'
+      window.location = 'https://app.roen.pe.kr/user/google'
     },
     kakao () {
-      window.location = 'https://api.roen.pe.kr/user/kakao'
+      window.location = 'https://app.roen.pe.kr/user/kakao'
     },
     socialLogin () {
       this.active = false
