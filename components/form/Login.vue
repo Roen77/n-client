@@ -21,7 +21,7 @@
         </div>
         <div :class="{'invalid':!password}">
           <label for="password">password</label>
-          <input id="password" v-model="password" type="password" placeholder="비밀번호">
+          <input id="password" v-model="password" type="password" placeholder="비밀번호" autocomplete="on">
         </div>
         <div v-if="!isvalidLength && password" class="err">
           비밀번호는 8자리 이상 30자 이하여야 합니다.

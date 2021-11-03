@@ -19,7 +19,7 @@
         <!-- 비밀번호 -->
         <div :class="{'invalid':!password}">
           <label for="password">password</label>
-          <input id="password" v-model="password" type="password" placeholder="비밀번호">
+          <input id="password" v-model="password" type="password" placeholder="비밀번호" autocomplete="on">
         </div>
         <div v-if="!isvalidLength && password" class="err">
           비밀번호는 8자리 이상 30자 이하여야 합니다.
@@ -27,7 +27,7 @@
         <!-- 비밀번호 확인 -->
         <div :class="{'invalid':!confirm_password}">
           <label for="comfirm_password">comfirm_password</label>
-          <input id="comfirm_password" v-model="confirm_password" type="password" placeholder="비밀번호 확인">
+          <input id="comfirm_password" v-model="confirm_password" type="password" placeholder="비밀번호 확인" autocomplete="on">
           <div v-if="!isconfirmPassword && confirm_password" class="err">
             비밀번호가 일치하지 않습니다
           </div>

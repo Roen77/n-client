@@ -33,7 +33,7 @@
         </div>
         <div>
           <label for="password">비밀번호</label>
-          <input id="current-password" value="password" type="password" readonly>
+          <input id="current-password" value="password" type="password" readonly autocomplete="off">
           <button class="round-btn fill change-btn" type="button" @click="showPassword">
             변경
           </button>
@@ -41,14 +41,14 @@
         <div v-if="isChangePassword" class="password_form">
           <div>
             <label for="password">비밀번호</label>
-            <input id="password" v-model="password" type="password">
+            <input id="password" v-model="password" type="password" autocomplete="off">
           </div>
           <div v-if="!isvalidLength && password" class="err">
             비밀번호는 8자리 이상 30자 이하여야 합니다.
           </div>
           <div>
             <label for="confirm_password">비밀번호 확인</label>
-            <input id="confirm_password" v-model="confirm_password" type="password">
+            <input id="confirm_password" v-model="confirm_password" type="password" autocomplete="off">
           </div>
         </div>
         <div v-if="!isconfirmPassword && confirm_password" class="err">
