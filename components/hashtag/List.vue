@@ -60,5 +60,4 @@ export default {
 .txt .hashtags{ background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(234, 249, 249, 0.952) 0.1%, rgba(239, 249, 251, 0.918) 90.1% );}
 .hashtags .tag{position: relative; display: flex;  background-color: skyblue; color:#222; border-radius: 20px; align-items: center; justify-content: center;padding: 7px; margin: 0.5%;}
 .hashtags .tag span{position: absolute; cursor: pointer; z-index: 10; font-size: 20px; transform: rotate(45deg); right: -20px; top:-7px;}
-
 </style>

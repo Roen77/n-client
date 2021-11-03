@@ -117,9 +117,12 @@ export default {
 .control_btns .right_btn{position: relative; margin-left: auto;}
 .control_btns button{border-radius: 10px; letter-spacing: 1px;}
 .control_btns button .fas{margin-right: 4px;}
-.book_form.edit{border: 5px solid red; box-sizing: border-box; display: flex; justify-content: center; align-items: center;}
-.book_form.edit .modal-container{height: 100vh; box-sizing: border-box; overflow-y: auto;}
+.book_form.edit{width: 100%; box-sizing: border-box; display: flex; justify-content: center; align-items: center;}
+.book_form.edit .modal-header>div{position: relative; width: 1200px; max-width: 100%; margin: 0 auto;}
+.book_form.edit .modal-container{height: 100vh; overflow-y: auto;}
 @media (max-width:600px) {
 .control_btns{display: block;}
+.book_form.edit .modal-header{padding: 5px;}
+.book_form.edit .modal-container{padding: 20px 5px;}
 }
 </style>

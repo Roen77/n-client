@@ -121,8 +121,7 @@ export default {
 .component-fade-enter-active, .component-fade-leave-active {
   transition: all .5s ease;
 }
-.component-fade-enter
-/* .component-fade-leave-active below version 2.1.8 */ {
+.component-fade-enter{
   opacity: 0;
   transform: translateY(100px);
 }

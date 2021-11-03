@@ -68,11 +68,9 @@ export default {
 .search_form .custom_select li:hover{background-color: #3b5999; color:#fff;}
 
 .fadeSlide-leave-active {
-  /* transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0); */
   transition: all .5s ease-in-out;
 }
-.fadeSlide-enter, .fadeSlide-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
+.fadeSlide-enter, .fadeSlide-leave-to{
   transform:translateY(100px);
   opacity: 0;
 }

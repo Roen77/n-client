@@ -127,9 +127,6 @@ export default {
 .main_container .form_content .date_area{display: flex; align-items: center;}
 .main_container .form_content .date_area label{margin-right: auto;}
 .img_container{position: relative;}
-/* @media (max-width:1200px) {
-  .form_content.addform{padding: 0 30px;}
-} */
 @media (max-width:600px) {
   .form_content.addform{padding: 0;}
  .main_container .form_content .date_area{display: block;}

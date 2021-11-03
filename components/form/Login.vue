@@ -89,7 +89,8 @@ export default {
       }
     },
     google () {
-      window.location = 'https://app.roen.pe.kr/user/google'
+      // window.location = 'https://app.roen.pe.kr/user/google'
+      window.location = 'http://localhost:5000/user/google'
     },
     kakao () {
       window.location = 'https://app.roen.pe.kr/user/kakao'

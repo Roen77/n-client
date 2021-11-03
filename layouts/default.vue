@@ -42,7 +42,7 @@ export default {
   },
   mounted () {
     const top = document.querySelector('.topbtn')
-    window.addEventListener('scroll', this.checkHeight)
+    window.addEventListener('scroll', this.debounce(this.checkHeight, 300))
     top.addEventListener('click', function () {
       window.scrollTo({
         top: 0,
@@ -51,7 +51,7 @@ export default {
     })
   },
   beforeDestroy () {
-    window.removeEventListener('scroll', this.checkHeight)
+    window.removeEventListener('scroll', this.debounce(this.checkHeight, 300))
   },
   methods: {
     onalert () {
@@ -61,7 +61,14 @@ export default {
       this.alertState = false
     },
     checkHeight () {
-      this.fix = window.scrollY > 0
+      this.fix = window.scrollY || window.pageYOffset || document.documentElement.scrollTop > 0
+    },
+    debounce (func, delay) {
+      let timeoutId = null
+      return () => {
+        clearTimeout(timeoutId)
+        timeoutId = setTimeout(func, delay)
+      }
     }
   }
 }
@@ -86,10 +93,14 @@ background-image: url(/images/main_bg.jpg); background-position: left  bottom 70
   z-index: 9999;
 }
 .topbtn.fixed{display: block;}
-@media (max-width:600px){
-  .default.container{
+@media (max-width:600px) {
+  .default.container {
     background-size: 300px;
     background-position: left -60px bottom 70px;
+  }
+  .topbtn {
+    padding: 7px;
+    font-size: 14px;
   }
 }
 </style>

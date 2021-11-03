@@ -33,7 +33,7 @@
         </div>
         <div>
           <label for="password">비밀번호</label>
-          <input id="password" value="password" type="password" readonly>
+          <input id="current-password" value="password" type="password" readonly>
           <button class="round-btn fill change-btn" type="button" @click="showPassword">
             변경
           </button>

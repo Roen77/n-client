@@ -21,7 +21,9 @@
           </nuxt-link>
         </li>
       </ul>
-      <a href="#" class="floating_btn" @mouseenter="showMenu=true"><i class="fas fa-plus"></i></a>
+      <button class="floating_btn" @mouseenter="showMenu=true">
+        <i class="fas fa-plus"></i>
+      </button>
     </div>
     <!-- books -->
     <div v-if="hasBook">
@@ -59,7 +61,6 @@ export default {
   display: inline-block;
 }
 .trigger button{display: none;}
-/* .main_container{padding-top: 100px;} */
 .bookshelf{position: relative;}
 .bookshelf .main_menu{position: fixed; bottom:180px; right:5px;  z-index: 50;  min-width: 160px; z-index: 50; text-align: center; z-index: 99999;}
 .bookshelf .main_menu .sub_menu{position: relative; padding: 20px; border-radius: 20px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); margin-bottom: 20px; background-color: #fff;}
@@ -69,6 +70,9 @@ export default {
 @media (max-width:600px) {
  .bookshelf .main_menu {right: -41px;}
  .bookshelf .main_menu .sub_menu{padding: 15px; left:-50px;}
+ .bookshelf .main_menu .floating_btn{
+   padding: 12px;
+ }
 
 }
 /* hover */

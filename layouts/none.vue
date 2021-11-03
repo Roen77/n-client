@@ -11,7 +11,7 @@
   </div>
 </template>
 <style scoped>
-.container.home{display: flex; align-items: center; justify-content: center;}
-.home_con{text-align: center; width: 100%;}
+.container.home{display: flex; align-items: center; justify-content: center; height: 100%;}
+.home_con{text-align: center; width: 100%; height: 100%;}
 .logo.en{margin-bottom: 10px;}
 </style>
