@@ -80,9 +80,6 @@ export const mutations = {
   updateState (state, payload) {
     Object.keys(payload).forEach((key) => { state[key] = payload[key] })
   },
-  updateEdit (state, value) {
-    state.editState = value
-  },
   updateSearch (state, payload) {
     // eslint-disable-next-line
     Object.keys(payload).forEach(key => state.search[key] = payload[key])

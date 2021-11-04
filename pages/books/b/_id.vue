@@ -79,18 +79,22 @@ export default {
   },
   methods: {
     ...mapActions('books', ['deleteBook']),
-    ...mapMutations('books', ['updateEdit']),
+    ...mapMutations('books', ['updateState']),
     onremoveBook () {
       this.alert = true
     },
     onEditBook () {
-      this.updateEdit(true)
+      this.updateState({
+        editState: true
+      })
     },
     onEditHashtag () {
       this.editHashtag = !this.editHashtag
     },
     closeEdit () {
-      this.updateEdit(false)
+      this.updateState({
+        editState: false
+      })
     },
     disagree () {
       this.agreeState = false

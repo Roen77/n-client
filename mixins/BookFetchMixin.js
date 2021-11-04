@@ -25,7 +25,9 @@ export default {
           data.thumbnail = this.imagePath.length ? this.imagePath : this.book.thumbnail
           await this.updateBook({ id: this.$route.params.id, data })
             .then((res) => {
-              this.updateEdit(false)
+              this.updateState({
+                editState: false
+              })
               bus.$emit('on:alert', { data: res.data.msg, bgcolor: '#AD1457' })
               setTimeout(() => {
                 bus.$emit('off:alert')

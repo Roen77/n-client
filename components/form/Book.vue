@@ -17,7 +17,7 @@
     <!-- 책 날짜 -->
     <div class="date_area">
       <label for="">출간날짜</label>
-      <b-form-datepicker id="datepicker" v-model="datetime"></b-form-datepicker>
+      <b-form-datepicker id="datepicker" v-model="datetime" locale="ko"></b-form-datepicker>
     </div>
     <!-- 책 이미지 추가/수정 -->
     <FormImage image-title="책 이미지" :thumbnail="book.thumbnail || ''" :show-thumbnail="isEditform" />
@@ -106,7 +106,7 @@ export default {
   },
   methods: {
     ...mapActions('books', ['createBook', 'updateBook']),
-    ...mapMutations('books', ['updateEdit']),
+    ...mapMutations('books', ['updateState']),
     onsubmitBook () {
       this.fetchData()
     },

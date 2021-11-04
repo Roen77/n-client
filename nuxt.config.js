@@ -60,7 +60,8 @@ export default {
   },
   moment: {
     defaultLocale: 'ko',
-    locales: ['ko']
+    locales: ['ko'],
+    timezone: true
   },
   axios: {
     browserBaseURL: process.env.NODE_ENV === 'production' ? 'https://app.roen.pe.kr/' : 'http://localhost:5000/',

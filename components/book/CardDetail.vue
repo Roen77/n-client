@@ -21,7 +21,7 @@
           </div>
           <div><b class="tit">작가</b><p>{{ bookauthorsFormat(book.authors) }}</p></div>
           <div><b class="tit">출판사</b><p>{{ book.publisher }}</p></div>
-          <div><b class="tit">출간날짜</b><p>{{ $moment(`${book.datetime}`).format("LL") }}</p></div>
+          <div><b class="tit">출간날짜</b><p>{{ $moment(`${book.datetime}`).subtract(1,'m').format('LL') }}</p></div>
           <div><b class="tit">isbn</b><p>{{ book.isbn }}</p></div>
           <a v-if="book.url" class="more" target="_blank" :href="book.url"> 자세히보기</a>
           <HashtagList :hashtags="book.Hashtags" :book-id="book.id" :user-id="book.UserId" />
